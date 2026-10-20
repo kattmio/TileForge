@@ -1,0 +1,48 @@
+
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+out/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.log
+
+# Operating system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# IDE and editor settings
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Signing keys and certificates
+*.pfx
+*.p12
+*.key
+*.pem
+
+# Generated Windows packages
+*.appx
+*.msix
+*.appxbundle
+*.msixbundle
+
+# Python caches (for future build tools)
+__pycache__/
+*.py[cod]
+.venv/
+venv/
