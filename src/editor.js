@@ -130,7 +130,7 @@ export class EditorView {
     };
     for (const [id, [key, type]] of Object.entries(fields)) {
       const input = document.getElementById(id);
-      const eventName = input.tagName === "TEXTAREA" ? "input" : "change";
+      const eventName = "change";
       input.addEventListener(eventName, () => {
         const component = this.selected;
         if (!component) return;
