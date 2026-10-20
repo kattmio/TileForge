@@ -58,7 +58,13 @@ export class BlocksView {
     this.workspace.replaceChildren();
     const blocks = this.project.blocks || [];
     $("#block-count").textContent = String(blocks.length);
-    $("#blocks-empty").classList.toggle("hidden", blocks.length > 0);
+    if (!blocks.length) {
+      const empty = document.createElement("div");
+      empty.className = "blocks-empty";
+      empty.id = "blocks-empty";
+      empty.textContent = "Add blocks from the toolbox to build your first program.";
+      this.workspace.append(empty);
+    }
     for (const block of blocks) {
       const definition = DEFINITIONS[block.type];
       if (!definition) continue;
