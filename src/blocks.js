@@ -18,7 +18,6 @@ export class BlocksView {
       this.render();
       this.onChange("Cleared program");
     });
-    $("#run-blocks").addEventListener("click", () => this.run());
     this.workspace.addEventListener("click", event => {
       const button = event.target.closest("[data-remove-block]");
       if (!button || !this.project) return;
