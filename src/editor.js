@@ -99,7 +99,6 @@ export class EditorView {
     this.onSelect(component.id);
     const activeNode = this.canvas.querySelector(`.component[data-id="${CSS.escape(component.id)}"]`) || node;
     this.drag = { id: component.id, startX: event.clientX, startY: event.clientY, x: component.x, y: component.y };
-    activeNode.setPointerCapture?.(event.pointerId);
     const move = moveEvent => {
       if (!this.drag) return;
       const dx = (moveEvent.clientX - this.drag.startX) / this.zoom;
